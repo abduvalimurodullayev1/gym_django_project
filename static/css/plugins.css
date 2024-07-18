@@ -1,0 +1,27 @@
+/*****************************************************************************
+  ____                                  _____ _
+ / ___|___  ___ _ __ ___   ___  ___    |_   _| |__   ___ _ __ ___   ___  ___
+| |   / _ \/ __| '_ ` _ \ / _ \/ __|_____| | | '_ \ / _ \ '_ ` _ \ / _ \/ __|
+| |__| (_) \__ \ | | | | | (_) \__ \_____| | | | | |  __/ | | | | |  __/\__ \
+ \____\___/|___/_| |_| |_|\___/|___/     |_| |_| |_|\___|_| |_| |_|\___||___/
+
+******************************************************************************/
+/************ Plugins Css **************************************
+
+    Template Name: Watson - Resume/Vcard Template
+    Author: cosmos-themes
+    Envato Profile: https://themeforest.net/user/cosmos-themes
+    version: 1.0
+    Copyright: 2018
+
+****************************************************************/
+@import url('plugins/bootstrap.css');
+@import url('plugins/font-awesome.css');
+@import url('plugins/linear-icons.css');
+@import url('plugins/animations.css');
+@import url('plugins/jquery.animatedheadline.css');
+@import url('plugins/owl.carousel.min.css');
+@import url('plugins/owl.theme.default.min.css');
+@import url('plugins/magnific-popup.css');
+@import url('plugins/simplebar.css');
+/*@import url('plugins/jquery.mb.YTPlayer.min.css');*/

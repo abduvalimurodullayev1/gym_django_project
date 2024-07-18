@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <title>{{ post.title }} - Your Site Name</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free Website Template" name="keywords">
+    <meta content="Free Website Template" name="description">
+
+    <!-- Favicon -->
+    <link href="{% static 'img/favicon.ico' %}" rel="icon">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Flaticon Font -->
+    <link href="{% static 'lib/flaticon/font/flaticon.css' %}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/style.min.css' %}" rel="stylesheet">
+</head>
+
+<body class="bg-white">
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 nav-bar">
+        <!-- Your Navbar Code Here -->
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header mb-5">
+        <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+            <h4 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase font-weight-bold">{{ post.title }}</h4>
+            <div class="d-inline-flex">
+                <p class="m-0 text-white"><a class="text-white" href="{% url 'index' %}">Home</a></p>
+                <p class="m-0 text-white px-2">/</p>
+                <p class="m-0 text-white">Blog Detail</p>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Blog Post Content -->
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <article>
+                    <img class="img-fluid mb-4" src="{{ post.image.url }}" alt="Blog Image">
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="d-flex flex-column align-items-center justify-content-center rounded-circle bg-primary text-white" style="width: 80px; height: 80px;">
+                            <small>{{ post.created_at|date:"d" }}</small>
+                            <strong class="text-uppercase m-0 text-white">{{ post.created_at|date:"M" }}</strong>
+                            <small>{{ post.created_at|date:"Y" }}</small>
+                        </div>
+                        <div class="pl-3">
+                            <h2 class="font-weight-bold">{{ post.title }}</h2>
+                            <div class="d-flex">
+                                <small class="mr-2 text-muted"><i class="fa fa-user"></i> {{ post.author }}</small>
+                                <small class="mr-2 text-muted"><i class="fa fa-folder"></i> {{ post.category }}</small>
+                                <small class="mr-2 text-muted"><i class="fa fa-comments"></i> {{ post.comments.count }} Comments</small>
+                            </div>
+                        </div>
+                    </div>
+                    <p>{{ post.content }}</p>
+
+                    <!-- Comments Section -->
+                    <div class="mt-5">
+                        <h4 class="mb-4">Comments ({{ comments|length }})</h4>
+                        {% if comments %}
+                            {% for comment in comments %}
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ comment.author_name }}</h5>
+                                        <p class="card-text">{{ comment.body }}</p>
+                                        <small class="text-muted">{{ comment.created_at|date:"F d, Y" }}</small>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            <p>No comments yet.</p>
+                        {% endif %}
+
+                        <!-- Comment Form -->
+                        <div class="mt-5">
+                            <h4 class="mb-4">Leave a Comment</h4>
+                            <form method="post">
+                                {% csrf_token %}
+                                {{ comment_form.as_p }}
+                                <button type="submit" class="btn btn-primary">Post Comment</button>
+                            </form>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+    <!-- Blog Post Content End -->
+
+    <!-- Footer Start -->
+    <div class="footer container-fluid mt-5 py-5 px-sm-3 px-md-5 text-white">
+        <!-- Your Footer Code Here -->
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+    <!-- Your Custom JavaScript -->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

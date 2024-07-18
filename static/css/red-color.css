@@ -1,0 +1,85 @@
+/*****************************************************************************
+  ____                                  _____ _
+ / ___|___  ___ _ __ ___   ___  ___    |_   _| |__   ___ _ __ ___   ___  ___
+| |   / _ \/ __| '_ ` _ \ / _ \/ __|_____| | | '_ \ / _ \ '_ ` _ \ / _ \/ __|
+| |__| (_) \__ \ | | | | | (_) \__ \_____| | | | | |  __/ | | | | |  __/\__ \
+ \____\___/|___/_| |_| |_|\___/|___/     |_| |_| |_|\___|_| |_| |_|\___||___/
+
+******************************************************************************/
+/************ Red Color Css **************************************
+
+    Template Name: Watson - Resume/Vcard Template
+    Author: cosmos-themes
+    Envato Profile: https://themeforest.net/user/cosmos-themes
+    version: 1.0
+    Copyright: 2018
+
+****************************************************************/
+.header-main .image-container .header-name:before {
+  background-color: #E82A2A; }
+
+.page-heading h2 {
+  color: #E82A2A; }
+
+.page-heading .icon {
+  color: #E82A2A; }
+
+.subheading h3 {
+  border-color: #E82A2A !important; }
+  .subheading h3:before, .subheading h3:after {
+    background-color: #E82A2A; }
+
+.banner-section h1 span {
+  color: #E82A2A; }
+
+.banner-section p .cd-words-wrapper b {
+  border-color: #E82A2A !important; }
+
+.about-info ul li span.title {
+  border-color: #E82A2A !important; }
+
+.btn-main {
+  border-color: #E82A2A !important;
+  color: #E82A2A; }
+  .btn-main:after {
+    background-color: #E82A2A; }
+
+.services .service-item .icon {
+  color: #E82A2A !important; }
+
+.testimonial-item .testimonial-content:before {
+  color: #E82A2A !important; }
+
+ul.experience li span.line-left, ul.education li span.line-left {
+  background-color: #E82A2A !important; }
+  ul.experience li span.line-left:before, ul.experience li span.line-left:after, ul.education li span.line-left:before, ul.education li span.line-left:after {
+    border-color: #E82A2A !important; }
+
+ul.experience .content h5, ul.education .content h5 {
+  color: #E82A2A; }
+
+.progress .progress-bar {
+  background-color: #E82A2A; }
+  .progress .progress-bar:after {
+    border-bottom-color: #d71717; }
+
+.portfolio-section .portfolio-filter ul li.active {
+  background-color: #E82A2A; }
+
+.portfolio-section .item figure:before {
+  background-color: #E82A2A; }
+
+.ajax-portfolio-popup .information span.title {
+  color: #E82A2A; }
+
+.blog-section .blog-item .blog-content .cat {
+  color: #E82A2A; }
+
+.contact-info .info-item .icon {
+  color: #E82A2A; }
+
+blockquote {
+  border-color: #E82A2A !important; }
+
+.blog-page .blog-heading .cat {
+  color: #E82A2A; }
