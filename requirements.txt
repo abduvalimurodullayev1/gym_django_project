@@ -3,3 +3,5 @@ Django==5.0.2
 pillow==10.2.0
 sqlparse==0.4.4
 typing_extensions==4.9.0
+
+
