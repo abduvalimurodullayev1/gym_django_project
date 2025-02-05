@@ -9,6 +9,3 @@ class ContactForm(ModelForm):
     class Meta:
         model = ContactMessage
         exclude = ()
-
-
-
